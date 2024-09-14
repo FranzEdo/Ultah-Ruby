@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora Ruby Shaneshia Sihombing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Pacifico', cursive;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('ruby2.png'); /* Ganti dengan link gambar background Anda */
+            background-size: cover;
+            background-position: center;
+            animation: scaleBackground 8s infinite alternate;
+            z-index: -1;
+        }
+
+        @keyframes scaleBackground {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(0.95);
+            }
+        }
+
+        h1 {
+            font-size: 4rem;
+            color: #ff69b4;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: pulse 2s infinite;
+            z-index: 1;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2) rotateY(10deg);
+            }
+        }
+
+        .photo-balloon {
+            position: absolute;
+            bottom: -100px;
+            animation: float 3s ease-in-out infinite;
+            width: 70px;
+            height: 100px;
+            background-image: url('ruby3.png'); /* Ganti dengan link gambar foto Anda */
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-200px) rotate(5deg);
+            }
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+        }
+
+        .running-text {
+            position: absolute;
+            top: 15%; /* Ubah posisi agar lebih tinggi */
+            width: 100%;
+            text-align: center;
+            font-size: 2rem;
+            color: #333;
+            white-space: nowrap;
+            animation: run-text 20s linear infinite;
+            padding: 10px 0;
+            z-index: 2;
+        }
+
+        @keyframes run-text {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .birthday-card {
+            text-align: center;
+            z-index: 2;
+            padding: 20px;
+            border: 2px solid #ff69b4; /* Border untuk ucapan */
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .birthday-text {
+            font-size: 3rem;
+            margin: 20px 0;
+        }
+
+        .profile-image {
+            width: 150px; /* Sesuaikan ukuran gambar profil */
+            border-radius: 50%;
+            margin: 10px 0;
+            cursor: pointer; /* Menunjukkan bahwa gambar dapat diklik */
+            transition: transform 0.3s;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05); /* Efek zoom saat hover */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background"></div>
+    <div class="photo-balloon" style="left: 10%;"></div>
+    <div class="photo-balloon" style="left: 30%;"></div>
+    <div class="photo-balloon" style="left: 50%;"></div>
+    <div class="photo-balloon" style="left: 70%;"></div>
+
+    <audio id="birthdayAudio" loop>
+        <source src="ultah1.mp3" type="audio/mpeg"> <!-- Ganti dengan link lagu Anda -->
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="running-text">
+        Met Ultah Ya Aurora Ruby Shaneshia Sihombing yang ke-1 Thn, semoga selalu sehat, panjang umur, murah rejeki, penuh berkat Tuhan!
+    </div>
+
+    <div class="birthday-card">
+        <img src="Ruby.png" alt="Klik For Play" class="profile-image" onclick="playMusic()">
+        <div class="click-play">Klik Photo Ruby</div>
+        <h1 class="birthday-text">Happy Birthday!</h1>
+        <p>Aurora Ruby Shaneshia Sihombing.</p>
+        <p>TURN 1th.</p>
+        <div class="text">From... <span class="typing"></span></div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+        // Typing text animation script
+        var typed = new Typed(".typing", {
+            strings: ["Papi Fransiscus Edo", "Abang Albertus Avniel", "Moma Tatiana", "#ShinobeFranz#AvNiel"],
+            typeSpeed: 100,
+            backSpeed: 60,
+            loop: true
+        });
+
+        // Play music when the profile image is clicked
+        function playMusic() {
+            const audio = document.getElementById('birthdayAudio');
+            audio.play();
+        }
+    </script>
+</body>
+</html>
