@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Aurora Ruby Shaneshia Sihombing</title>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
@@ -97,7 +97,6 @@
             border: 2px solid #ff69b4;
             border-radius: 10px;
             background-color: rgba(255, 255, 255, 0.8);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             max-width: 90%; /* Maksimal lebar untuk responsif */
             margin: auto;
         }
@@ -147,6 +146,16 @@
             }
             .profile-image {
                 width: 100px;
+            }
+        }
+
+        /* Penyesuaian untuk orientasi landscape */
+        @media (orientation: landscape) {
+            .birthday-card {
+                margin: 10px; /* Memberikan margin di landscape */
+            }
+            h1, .birthday-text, .running-text {
+                font-size: 1.8rem; /* Mengurangi ukuran font di landscape */
             }
         }
     </style>
