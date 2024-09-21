@@ -16,6 +16,7 @@
             margin: 0;
             overflow: hidden;
             position: relative;
+            text-align: center;
         }
 
         .background {
@@ -72,7 +73,6 @@
             position: absolute;
             top: 15%;
             width: 100%;
-            text-align: center;
             font-size: 2rem;
             color: #333;
             white-space: nowrap;
@@ -98,6 +98,8 @@
             border-radius: 10px;
             background-color: rgba(255, 255, 255, 0.8);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 90%; /* Maksimal lebar untuk responsif */
+            margin: auto;
         }
 
         .birthday-text {
@@ -115,6 +117,37 @@
 
         .profile-image:hover {
             transform: scale(1.05);
+        }
+
+        /* Media Queries untuk responsivitas */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+            .running-text {
+                font-size: 1.5rem;
+            }
+            .birthday-text {
+                font-size: 2.5rem;
+            }
+            .profile-image {
+                width: 120px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            .running-text {
+                font-size: 1.2rem;
+            }
+            .birthday-text {
+                font-size: 2rem;
+            }
+            .profile-image {
+                width: 100px;
+            }
         }
     </style>
 </head>
